@@ -1,7 +1,7 @@
 
   
 // DEPENDENCIES: include the path package to get the correct file path for html
-// const path = require("path");
+const path = require("path");
 const router = require("express").Router();
 
 // ROUTING
@@ -12,7 +12,7 @@ router.get("/", (req, res) => res.json(path.join(__dirname, "public/index.html")
 
 
 // HTML GET Request: Added for Heroku
-router.get("/notes", (req, res) => res.sendFile(path.join(__dirname, "public/notes.html")));
+router.get("/notes", (req, res) => res.sendFile(path.join(__dirname, "../public/notes.html")));
 
 
 
