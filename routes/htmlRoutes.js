@@ -7,11 +7,13 @@ const router = require("express").Router();
 // ROUTING
 
 // HTML GET Request: Responds with the notes.html file
-router.get("/notes", (req, res) => res.sendFile(path.join(__dirname, "public/notes.html")));
+router.get("/", (req, res) => res.json(path.join(__dirname, "public/index.html")));
+
 
 
 // HTML GET Request: Added for Heroku
-router.get("/", (req, res) => res.json(path.join(__dirname, "public/index.html")));
+router.get("/notes", (req, res) => res.sendFile(path.join(__dirname, "public/notes.html")));
+
 
 
 // HTML GET Request: Responds with the index.html & all other file(s)
